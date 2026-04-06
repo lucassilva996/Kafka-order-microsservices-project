@@ -1,4 +1,4 @@
-package com.payment_service.entity;
+package com.inventory_service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,10 +8,10 @@ import jakarta.persistence.Id;
 import lombok.Data;
 @Entity
 @Data
-public class Payment {
+public class Inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long orderId;
-    private String status;
+    private String product;
+    private Integer quantity;
 }

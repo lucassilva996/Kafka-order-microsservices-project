@@ -1,3 +1,15 @@
+package com.payment_service.consumer;
+
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Component;
+
+import com.payment_service.entity.Payment;
+import com.payment_service.event.OrderCreatedEvent;
+import com.payment_service.event.PaymentApprovedEvent;
+import com.payment_service.repository.PaymentRepository;
 @Component
 @RequiredArgsConstructor
 public class PaymentConsumer {

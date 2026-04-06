@@ -1,3 +1,13 @@
+package com.order_service.service;
+
+import lombok.RequiredArgsConstructor;
+
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+import com.order_service.entity.Order;
+import com.order_service.event.OrderCreatedEvent;
+import com.order_service.repository.OrderRepository;
 @Service
 @RequiredArgsConstructor
 public class OrderService {
